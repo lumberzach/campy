@@ -2,6 +2,7 @@ import GoogleMapReact from "google-map-react"
 import LocationMarker from "./LocationMarker"
 import FireInfo from './FireInfo'
 import { useState } from 'react'
+require("dotenv").config()
 
 
 const Map = ({ fireData, center, zoom }) => {
@@ -22,7 +23,7 @@ const Map = ({ fireData, center, zoom }) => {
     return (
         <div className="map">
             <GoogleMapReact
-                bootstrapURLKeys={{ key: 'AIzaSyBEzZJjXRhwvCJLffRpZQDDStA3mPlOFwU' }}
+                bootstrapURLKeys={{ key: process.env.REACT_APP_MAPS_API }}
                 defaultCenter={ center }
                 defaultZoom={ zoom }
             >
