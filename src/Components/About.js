@@ -1,5 +1,5 @@
 import LottieAnimation from '../Lottie';
-import camping from '../Animation/camping.json';
+import camping from '../Animation/ufocamping.json';
 
 const About = () => {
     return (

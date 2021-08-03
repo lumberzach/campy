@@ -43,9 +43,10 @@ const App = () => {
   //Fetch Tasks
   const fetchTasks = async () => {
     console.log('fetching items')
+    setLoading(true)
     const res = await fetch('https://cryptic-journey-92833.herokuapp.com/items')
     const data = await res.json()
-
+    setLoading(false)
     return data
   }
 
@@ -89,7 +90,7 @@ const App = () => {
 
   return (
     <Router>
-    <div className=''>
+    <div className='hello'>
     <Nav/>
       <Route path='/list' exact render={(props) => (
         <>
@@ -97,7 +98,8 @@ const App = () => {
           <Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask} />
           {showAddTask && <AddTask onAdd={addTask} />}
           {tasks.length > 0 ? 
-          <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> : <h4 style={{ textAlign: 'center' }}> No items found, please add to this list. </h4>}
+          <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/> : !loading && <h4 style={{ textAlign: 'center' }}> No items found, please add to this list. </h4>}
+          {loading ? <Loader/> : null}
         </>
       )}/>
       <Route path='/about' component={About} />
@@ -110,7 +112,6 @@ const App = () => {
           : <Loader/>
         )}
         />
-
       <Footer />
     </div>
     </Router>
