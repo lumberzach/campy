@@ -1,7 +1,7 @@
 # Created to learn the MERN stack.
 Live Demo deployed to Heroku at: https://campy-app-frontend.herokuapp.com/
 
-![Campy](https://imgur.com/a/k7rMmdV)
+![Campy](https://i.imgur.com/cHLQUvj.png)
 
 ## Available Scripts
 
