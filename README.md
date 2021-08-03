@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Created to learn the MERN stack.
+Live Demo deployed to Heroku at: https://campy-app-frontend.herokuapp.com/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Campy](https://imgur.com/a/k7rMmdV)
 
 ## Available Scripts
 
